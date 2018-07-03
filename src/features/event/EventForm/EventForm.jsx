@@ -1,11 +1,8 @@
-import React, { Component } from "react";
+import React from "react";
 import { Segment, Form, Button } from "semantic-ui-react";
 
-class EventForm extends Component {
-  render() {
-    return (
+const EventForm = (props) => 
       <div>
-          <Button positive content='Create Event' />
         <Segment>
           <Form>
             <Form.Field>
@@ -31,12 +28,9 @@ class EventForm extends Component {
             <Button positive type="submit">
               Submit
             </Button>
-            <Button type="button">Cancel</Button>
+            <Button type="button" onClick={props.formOpenHandler}>Cancel</Button>
           </Form>
         </Segment>
       </div>
-    );
-  }
-}
 
 export default EventForm;
