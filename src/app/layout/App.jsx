@@ -1,13 +1,18 @@
-import React, { Component } from 'react';
-
+import React, { Component } from "react";
+import EventDashboard from "../../features/event/EventDashboard/EventDashboard";
+import { Container } from "semantic-ui-react";
+import NavBar from "../../features/nav/NavBar/NavBar";
+import Aus from "../hoc/Aus/Aus";
 
 class App extends Component {
   render() {
     return (
-      <div>
-        <h1>Alain Transport</h1>
-        <p>Alors que deviens tu boy</p>
-      </div>
+      <Aus>
+        <NavBar />
+        <Container className="main">
+          <EventDashboard />
+        </Container>
+      </Aus>
     );
   }
 }
