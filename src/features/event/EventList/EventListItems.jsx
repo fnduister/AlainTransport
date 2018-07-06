@@ -1,11 +1,8 @@
-import React, { Component } from "react";
+import React from "react";
 import { Segment, Item, Icon, List, Button } from "semantic-ui-react";
 import EventListAttendee from "./EventListAttendee";
 
-class EventListItems extends Component {
-  render() {
-    const { event ,onEditEvent, onDeleteEvent} = this.props;
-    return (
+const EventListItems = ({event ,onEditEvent, onDeleteEvent}) =>
       <Segment.Group>
         <Segment>
           <Item.Group>
@@ -40,8 +37,5 @@ class EventListItems extends Component {
           <Button onClick={onEditEvent(event)} as="a" color="teal" floated="right" content="View" />
         </Segment>
       </Segment.Group>
-    );
-  }
-}
 
 export default EventListItems;
