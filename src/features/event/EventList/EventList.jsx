@@ -8,7 +8,7 @@ class EventList extends Component {
     return (
       <Aus>
         <h1>Event List</h1>
-        {events.map(event => <EventListItems onDeleteEvent={onDeleteEvent} onEditEvent={this.props.onEventEdit} key={event.id} event={event} />)}
+        {events.map(event => <EventListItems onDeleteEvent={onDeleteEvent} key={event.id} event={event} />)}
       </Aus>
 
     );
