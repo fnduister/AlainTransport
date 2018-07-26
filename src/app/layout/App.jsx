@@ -10,11 +10,13 @@ import PeopleDashboard from "../../features/user/PeopleDashboard/PeopleDashboard
 import EventForm from "../../features/event/EventForm/EventForm";
 import Aus from "../hoc/Aus/Aus";
 import HomePage from "../../features/home/HomePage";
+import ModalManager from "../../features/modals/ModalManager";
 
 class App extends Component {
   render() {
     return (
       <Aus>
+        <ModalManager/>
         <Route exact path="/" component={HomePage} />
 
         <Route
