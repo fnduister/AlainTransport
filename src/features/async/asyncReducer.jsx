@@ -6,8 +6,11 @@ const initialState = {
 
 const asyncReducer = handleActions(
   {
-    ASYNC_ACTION_STARTED: state => {
+    ASYNC_ACTION_START: state => {
       return { ...state, loading: true };
+    },
+    ASYNC_ACTION_FINISHED: state => {
+      return {...state, loading: false}
     }
   },
   initialState
